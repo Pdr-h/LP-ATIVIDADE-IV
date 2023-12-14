@@ -12,7 +12,7 @@ struct Contato
 
 char *buscarTelefone(struct Contato contatos[], char *nome)
 {
-    for (int i = 0; i < 3; i++)
+    for (i = 0; i < 3; i++)
     {
         if (strcmp(contatos[i].nome, nome) == 0)
         {
@@ -33,7 +33,7 @@ int main()
 
     do
     {
-        printf("Digite a opção que deseja: \n\n");
+        printf("Digite a opÃ§Ã£o que deseja: \n\n");
         printf("[1] - Cadastrar 3 pessoas;\n[2] - SAIR.\n\n");
         scanf("%d", &opcao);
         system("cls");
@@ -43,7 +43,7 @@ int main()
         case 1:
             for (i = 0; i < 3; i++)
             {
-                printf("Digite o nome do %d° contato: ", i + 1);
+                printf("Digite o nome do %dÂ° contato: ", i + 1);
                 scanf("%s", contatos[i].nome);
                 printf("Digite o telefone de %s: ", contatos[i].nome);
                 scanf("%s", contatos[i].telefone);
@@ -60,20 +60,20 @@ int main()
             }
             do
             {
-                printf("\nDigite o nome do contato que você deseja buscar: ");
+                printf("\nDigite o nome do contato que vocÃª deseja buscar: ");
                 scanf("%s", nome);
                 telefoneEncontrado = buscarTelefone(contatos, nome);
                 if (telefoneEncontrado != NULL)
                 {
-                    printf("O número de telefone de %s é: %s\n", nome, telefoneEncontrado);
+                    printf("O nÃºmero de telefone de %s Ã©: %s\n", nome, telefoneEncontrado);
                  
                 }
                 else
                 {
-                    printf("Contato não encontrado.\n");
+                    printf("Contato nÃ£o encontrado.\n");
                   
                 }
-                printf("Procurar outro telefone?\n[1] - Sim\n[2] - Não\n\n");
+                printf("Procurar outro telefone?\n[1] - Sim\n[2] - NÃ£o\n\n");
                 scanf("%d", &opcao2);
                 system("cls");
             } while (opcao2 == 1);
@@ -82,7 +82,7 @@ int main()
         printf("saindo.......");
         break;
         default:
-            printf("INVÁLIDO");
+            printf("INVÃLIDO");
             break;
         }
     } while (opcao3 == 1);
